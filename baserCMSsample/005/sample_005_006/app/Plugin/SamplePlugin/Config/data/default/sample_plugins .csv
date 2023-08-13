@@ -1,0 +1,10 @@
+"id","name","created","modified"
+"","サンプルプラグインname","",""
+	public function implementedEvents() {
+		return array(
+			'Controller.initialize' => 'beforeFilter',
+			'Controller.beforeRender' => 'beforeRender',
+			'Controller.beforeRedirect' => array('callable' => 'beforeRedirect', 'passParams' => true),
+			'Controller.shutdown' => 'afterFilter'
+		);
+	}
